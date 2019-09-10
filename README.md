@@ -1,38 +1,27 @@
-# sanity-batya-portfolio
+# sanity-template-gatsby-blog
 
-A portfolio using structured content and a static site builder.
+_Fully customizable blog template with a React.js front-end._
 
-Deployed from [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-gatsby-portfolio).
+This template repo is used by Sanity.io to easily create deployed and configured projects through a web interface. You can test it by [creating this project](https://www.sanity.io/create?template=sanity-io%2Fsanity-template-gatsby-blog).
 
-## What you have
+The template contains both a Sanity.io Sanity Studio and a front-end in Gatsby. Both are deployed on Netlify.
 
-- A blazing fast portfolio with [Gatsby.js](https://gatsbyjs.org)
-- Structured content using [Sanity.io](https://www.sanity.io)
-- Global deployment on [Netlify](https://netlify.com)
+Want to make a template for Sanity and your favourite front-end framework? We’re still maturing [sanity.io/create](https://sanity.io/create) and our APIs, but do tell us about it on [slack.sanity.io](https://slack.sanity.io).
 
-## Quick start
+![The Sanity and Gatsby powered blog](https://github.com/sanity-io/sanity-template-gatsby-blog/blob/master/assets/frontend.jpg?raw=true)
 
-1. Clone this repository from your GitHub account
-2. `npm install` in the project root folder on local
-3. `npm run dev` to start the Studio and frontend locally
-   - Your Studio should be running on [http://localhost:3333](http://localhost:3333)
-   - Your frontend should be running on [http://localhost:8000](http://localhost:8000)
-4. `npm run build` to build to production locally
+## Local development
 
-## Enable real-time content preview in development
+You develop the templates in `/template`, and review your changes in `/build`.
 
-1. Go to your [project’s API settings on manage.sanity.io](https://manage.sanity.io/projects/bd9mu609/settings/api) and create a token with read rights.
-2. Copy `.env.development.template` to `.env.development` and paste in the token: `SANITY_READ_TOKEN="yourTokenHere"`.
-3. Restart the development server (`ctrl + C` and `npm run dev`).
+1. **Install dependencies with `npm install` in the root folder.** This will install the template development tool that watches changes in the `/template` folder and output the template to `/build`.
 
-If you want to disable the preview you can set `watchMode: false` in gatsby-config.js. If you just want to preview published changes you can set `overlayDrafts: false` in gatsby-config.js.
+2. **Run `npm run dev` in root folder.** This will build the template files to `/build`. This is how the code will look for those who install the project later.
 
-## Deploy changes
+3. **Run `npm install` in `./build/web` and `sanity install` in `/build/studio`** This will install the necessary dependencies for the Gatsby frontend and the Studio.
 
-Netlify automatically deploys new changes commited to the `master` branch on GitHub. If you want to change the deployment branch you may do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
+4. **Run `npm run dev` in `./build/web` and `sanity start` in `/build/studio`**. This will start the development servers for the Gatsby frontend and Sanity Studio.
 
-## Get help
+## Notes
 
-[![Slack Community Button](https://slack.sanity.io/badge.svg)](https://slack.sanity.io/)
-
-Join [Sanity’s developer community](https://slack.sanity.io) or ping us [on twitter](https://twitter.com/sanity_io).
+When developing ProjectId and dataset name can be changed in `template-values-development.json`

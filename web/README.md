@@ -1,1 +1,0 @@
-# sanity-batya-portfolio-web
